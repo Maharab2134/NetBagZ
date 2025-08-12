@@ -1,0 +1,155 @@
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="16dp"
+    android:elevation="4dp"
+    app:cardCornerRadius="8dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="User Name"
+                android:paddingEnd="8dp"/>
+
+            <TextView
+                android:id="@+id/shopName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:text="Shop Name"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/productTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#00ACC1"
+                android:text="Product Title"
+                android:paddingEnd="8dp"/>
+
+            <TextView
+                android:id="@+id/totalAmount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Total Amount"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/paymentMethod"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#D81B60"
+                android:text="Payment Method"
+                android:paddingEnd="8dp"/>
+
+            <TextView
+                android:id="@+id/productQuantity"
+                android:layout_width="0dp"
+                android:textColor="#039BE5"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Product Quantity"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/invoiceId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Invoice ID"/>
+
+            <TextView
+                android:id="@+id/orderStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="#E71A16"
+                android:text="Order Status"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/productSize"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="#1080E2"
+                android:text="Order Status"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#1080E2"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="Delivery Address" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/addressIcon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:lottie_rawRes="@raw/location"
+                    app:lottie_loop="true"
+                    app:lottie_autoPlay="true"
+                    android:paddingStart="8dp"
+                    android:paddingLeft="8dp"
+                    android:layout_marginEnd="15dp"
+                    android:scaleType="centerInside" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

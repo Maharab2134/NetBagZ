@@ -1,0 +1,26 @@
+# ===== Android Studio / Gradle =====
+.gradle/
+**/build/
+
+gradle/
+
+# IDE project files
+.idea/
+*.iml
+
+# Local config (contains SDK path)
+local.properties
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Native build
+.cxx/
+
+# Captures and logs
+captures/
+*.log
+
+# Generated files
+externalNativeBuild/

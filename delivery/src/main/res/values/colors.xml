@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryColor">#6200EE</color>
+    <color name="purple">#8692f7</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="darkPrimary">#0056B3</color>
+    <color name="colorPrimaryDark">#303F9F</color>  <!-- Dark Blue -->
+    <color name="custom_primary">#6200EE</color>
+    <color name="custom_accent">#03DAC5</color>
+    <color name="custom_primary_text">#212121</color>
+    <color name="custom_secondary_text">#757575</color>
+    <color name="custom_hint_text">#B0BEC5</color>
+    <color name="custom_pressed">#BBDEFB</color>
+    <color name="custom_border">#E0E0E0</color>
+    <color name="gradient_start">#FF7E5F</color>
+    <color name="gradient_end">#FF5F6D</color>
+    <color name="colorPrimary">#4CAF50</color>
+    <color name="colorAccent">#FFC107</color>
+    <color name="black">#212121</color>
+    <color name="gray">#757575</color>
+    <color name="green">#4CAF50</color>
+    <color name="red">#D32F2F</color>
+    <color name="orange">#FFA000</color>
+
+</resources>

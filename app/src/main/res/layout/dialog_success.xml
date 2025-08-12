@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp"
+    android:background="#808080"
+    android:layout_gravity="center"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@color/white"
+        android:elevation="4dp"
+        android:gravity="center_horizontal">
+
+        <!-- Green Check Icon -->
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_check_circle"
+            android:layout_gravity="center"
+            app:tint="@color/green" />
+
+        <!-- Invoice Status Message -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your payment was successful!"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:paddingTop="8dp"
+            android:textColor="#4BE40A"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thank you for your payment.\nWe will be in update with more details shortly.\n Check your Invoice."
+            android:textSize="14sp"
+            android:layout_marginTop="10dp"
+            android:textColor="#606060"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="16dp"
+            android:lineSpacingExtra="4dp"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

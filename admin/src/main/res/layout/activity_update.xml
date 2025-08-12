@@ -1,0 +1,112 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Product Update"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:paddingBottom="16dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewProducts"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:background="#f0f0f0" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editTextProductName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Product Name"
+                android:layout_marginTop="12dp"
+                android:singleLine="true"
+                android:inputType="text"
+                android:background="@drawable/custom_edittext"
+                android:maxLines="1"
+                android:imeOptions="actionNext"/>
+
+            <EditText
+                android:id="@+id/editTextProductPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Product Price"
+                android:singleLine="true"
+                android:inputType="text"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/custom_edittext"
+                android:maxLines="1"
+                android:imeOptions="actionNext"/>
+
+            <EditText
+                android:id="@+id/editTextProductDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Product Details"
+                android:gravity="top"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/custom_edittext"
+                android:inputType="textMultiLine"
+                android:minHeight="100dp"
+                android:maxLines="7"
+                android:overScrollMode="always"
+                android:imeOptions="actionNext"/>
+
+            <EditText
+                android:id="@+id/editTextProductDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Product Description"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:minHeight="100dp"
+                android:maxLines="7"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/custom_edittext"
+                android:overScrollMode="always"
+                android:imeOptions="actionNext"/>
+
+            <EditText
+                android:id="@+id/editTextProductRating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Product Rating"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_edittext"
+                android:singleLine="true"
+                android:inputType="text"
+                android:maxLines="1"
+                android:imeOptions="actionDone"/>
+
+            <Button
+                android:id="@+id/btnUpdateProduct"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/purple"
+                android:text="Update product"
+                android:textSize="18sp"
+                app:cornerRadius="20dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

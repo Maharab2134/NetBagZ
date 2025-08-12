@@ -1,0 +1,168 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Container for Icon and Text -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="15dp"
+            android:gravity="center_vertical">
+
+            <!-- Icon (Left) -->
+            <ImageView
+                android:id="@+id/toolbar_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:contentDescription="TODO"
+                android:src="@drawable/back_arrow" />
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="2dp"
+                android:layout_toEndOf="@+id/toolbar_icon"
+                android:text="About Me"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </Toolbar>
+
+    <!-- Scrollable Content -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="70dp"
+            android:gravity="center_horizontal">
+
+            <!-- Developer Image -->
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/developer_image"
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/coding"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#2196F3" />
+
+            <!-- Developer Name -->
+            <TextView
+                android:id="@+id/developer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Md. Maharab Hosen"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Developer Title -->
+            <TextView
+                android:id="@+id/developer_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Android App Developer"
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Contact Information Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact Information"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Email -->
+            <TextView
+                android:id="@+id/developer_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email: maharab442@example.com"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Website -->
+            <TextView
+                android:id="@+id/developer_website"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Website: www.maharab442.com"
+                android:textColor="#2196F3"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Follow Me Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Follow Me"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Social Media Links -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <!-- Facebook -->
+                <ImageView
+                    android:id="@+id/facebook_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/facebook"
+                    android:contentDescription="Facebook Icon"
+                    android:layout_marginEnd="16dp" />
+
+                <!-- Twitter -->
+                <ImageView
+                    android:id="@+id/twitter_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/twitter"
+                    android:contentDescription="Twitter Icon"
+                    android:layout_marginEnd="16dp" />
+
+                <!-- LinkedIn -->
+                <ImageView
+                    android:id="@+id/linkedin_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/linkedin"
+                    android:contentDescription="LinkedIn Icon"
+                    android:layout_marginEnd="16dp" />
+
+                <!-- Github -->
+                <ImageView
+                    android:id="@+id/github_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/github"
+                    android:contentDescription="GitHub Icon" />
+            </LinearLayout>
+        </LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_hire"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/btn_background"
+        android:layout_marginTop="50dp"
+        android:text="Hire me"
+        android:textColor="@color/colorPrimaryNight"/>
+</LinearLayout>

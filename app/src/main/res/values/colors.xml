@@ -1,0 +1,18 @@
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorOnBackground">#000000</color>
+    <color name="colorPrimaryNight">#BB86FC</color> <!-- Light purple -->
+    <color name="colorPrimaryDarkNight">#3700B3</color> <!-- Dark purple -->
+    <color name="colorOnPrimaryNight">#FFFFFF</color> <!-- White for text/icons on primary -->
+    <color name="colorAccentNight">#03DAC5</color> <!-- Teal accent -->
+    <color name="black">#121212</color> <!-- Dark background -->
+    <color name="white">#FFFFFF</color>
+    <color name="purple">#8692f7</color>
+    <color name="grey">#BAB6B6</color>
+    <color name="green">#00FF00</color> <!-- Bright green -->
+    <color name="fully_transparent">#00000000</color>
+</resources>

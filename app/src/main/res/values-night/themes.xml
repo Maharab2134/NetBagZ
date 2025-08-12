@@ -1,0 +1,11 @@
+<resources>
+    <!-- Night theme -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Dark theme colors -->
+        <item name="colorPrimary">@color/colorPrimaryNight</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDarkNight</item>
+        <item name="colorOnPrimary">@color/colorOnPrimaryNight</item>
+        <item name="colorSecondary">@color/colorAccentNight</item>
+        <item name="colorOnBackground">@color/white</item>
+    </style>
+</resources>

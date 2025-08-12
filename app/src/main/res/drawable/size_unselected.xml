@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#deefe9"/> <!-- Light color for unselected background -->
+            <stroke android:color="#E6E6FA" android:width="2dp"/> <!-- Lavender border -->
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,678 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activity.HelpCenterActivity">
+
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Container for Icon and Text -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="15dp"
+            android:gravity="center_vertical">
+
+            <!-- Icon (Left) -->
+            <ImageView
+                android:id="@+id/toolbar_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="3dp"
+                android:src="@drawable/back_arrow"
+                android:layout_marginStart="8dp" />
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/toolbar_icon"
+                android:text="Help Center"
+                android:layout_marginTop="5dp"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/toolbar_action_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:lottie_rawRes="@raw/shoppingtolle"
+                app:lottie_loop="true"
+                app:lottie_autoPlay="true"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"/>
+
+        </RelativeLayout>
+
+    </Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="8dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D58B74"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Welcome Text -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="to NetBagz Help Center"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/user_greeting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hi [UserName], How can we help?"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Search Bar -->
+            <EditText
+                android:id="@+id/search_help"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Search"
+                android:layout_marginTop="13dp"
+                android:drawableEnd="@android:drawable/ic_menu_search"
+                android:padding="8dp"
+                android:background="@android:drawable/editbox_background" />
+
+            <!-- Banner Image -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:src="@drawable/banner"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="9dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Self Service Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Self Service"
+                android:textSize="22sp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- GridLayout for Self Service -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="4"
+                android:rowCount="4"
+                android:alignmentMode="alignMargins"
+                android:columnOrderPreserved="false"
+                android:padding="5dp"
+                android:layout_marginBottom="16dp">
+
+
+                    <LinearLayout
+                        android:id="@+id/b1"
+                        android:layout_width="78dp"
+                        android:layout_height="100dp"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/pointer"
+                            android:contentDescription="Track My Order" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Track My Order"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/b2"
+                        android:layout_width="78dp"
+                        android:layout_height="100dp"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/resetpass"
+                            android:contentDescription="Cancel Order" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Reset Password"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/b3"
+                        android:layout_width="78dp"
+                        android:layout_height="100dp"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/mypayment"
+                            android:contentDescription="Refund Request" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Payment Option"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/b4"
+                    android:layout_width="78dp"
+                    android:layout_height="100dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/myprofile"
+                    android:contentDescription="Track My Order" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Profile"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:textSize="12sp" />
+                    </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/b5"
+                    android:layout_width="78dp"
+                    android:layout_height="100dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/re"
+                        android:contentDescription="Track My Order" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Return My Order"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/b6"
+                    android:layout_width="78dp"
+                    android:layout_height="100dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/cancelorder"
+                        android:contentDescription="Track My Order" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cancel My Order"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </GridLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:background="#E0E0E0"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginTop="2dp" />
+
+            <!-- Questions Section -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Top Questions"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginTop="13dp"
+                android:layout_marginBottom="8dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="3dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="How can I track my order?"
+                            android:textSize="16sp"
+                            android:padding="10dp" />
+
+                        <ImageView
+                            android:id="@+id/q1"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/down"
+                            android:layout_marginEnd="10dp"
+                            android:contentDescription="Next" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#E0E0E0"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginEnd="6dp"/>
+                    <TextView
+                        android:id="@+id/answer_q1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="You can track your order directly through the app by logging into your account and checking the 'My Orders' or 'Track Order' section."
+                        android:visibility="gone"
+                        android:padding="5dp"
+                        android:textSize="14sp"
+                        android:textColor="#555555" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#E0E0E0"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginEnd="6dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="8dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="How can I cancel my order?"
+                            android:textSize="16sp"
+                            android:padding="10dp" />
+
+                        <ImageView
+                            android:id="@+id/q2"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/down"
+                            android:layout_marginEnd="10dp"
+                            android:contentDescription="Next" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#E0E0E0"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginEnd="6dp"/>
+                    <TextView
+                        android:id="@+id/answer_q2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="To cancel your order, open the app, go to the 'My Orders' section, select the order you want to cancel, and look for the 'Cancel Order' option."
+                        android:visibility="gone"
+                        android:padding="5dp"
+                        android:textSize="14sp"
+                        android:textColor="#555555" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#E0E0E0"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginEnd="6dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="8dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="What are the 'Delivery Timelines'?"
+                            android:textSize="16sp"
+                            android:padding="10dp" />
+
+                        <ImageView
+                            android:id="@+id/q3"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/down"
+                            android:layout_marginEnd="10dp"
+                            android:contentDescription="Next" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#E0E0E0"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginEnd="6dp"/>
+                    <TextView
+                        android:id="@+id/answer_q3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Delivery timelines refer to the estimated time frame within which your order is expected to arrive, based on factors like processing time, shipping method, and distance."
+                        android:visibility="gone"
+                        android:padding="5dp"
+                        android:textSize="14sp"
+                        android:textColor="#555555" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#E0E0E0"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginEnd="6dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="8dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Why am I seeing an error while placing the order?"
+                            android:textSize="16sp"
+                            android:padding="10dp" />
+
+                        <ImageView
+                            android:id="@+id/q4"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/down"
+                            android:layout_marginEnd="10dp"
+                            android:contentDescription="Next" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#E0E0E0"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginEnd="6dp"/>
+                    <TextView
+                        android:id="@+id/answer_q4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="You might be seeing an error while placing the order due to issues like payment failure, incorrect shipping details, stock unavailability, or technical glitches in the app or website."
+                        android:visibility="gone"
+                        android:padding="5dp"
+                        android:textSize="14sp"
+                        android:textColor="#555555" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#E0E0E0"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginEnd="6dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="8dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="How do I return my item?"
+                            android:textSize="16sp"
+                            android:padding="10dp" />
+
+                        <ImageView
+                            android:id="@+id/q5"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/down"
+                            android:layout_marginEnd="10dp"
+                            android:contentDescription="Next" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#E0E0E0"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginEnd="6dp"/>
+                    <TextView
+                        android:id="@+id/answer_q5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="To return your item, go to the 'My Orders' section in the app, select the item you want to return, and follow the prompts to initiate a return request. You may need to choose a return reason and arrange for pickup or drop-off, depending on the return policy."
+                        android:visibility="gone"
+                        android:padding="5dp"
+                        android:textSize="14sp"
+                        android:textColor="#555555" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#E0E0E0"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginEnd="6dp"
+                        android:layout_marginBottom="6dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Still Need Help?"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginEnd="10dp"
+                app:cardElevation="4dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/customerservice"
+                        android:layout_marginBottom="19dp"
+                        android:contentDescription="Call Icon"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="8dp" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Contact to Customer Care"
+                        android:textSize="17sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NetBag, our Assistant: 24/7"
+                        android:textSize="15sp"
+                        android:padding="2dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Payment, Delivery problem solver."
+                        android:textSize="15sp"
+                        android:layout_marginBottom="7dp" />
+                </LinearLayout>
+                    <ImageView
+                        android:id="@+id/call"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/next"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="8dp" />
+            </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="50dp"
+                android:layout_marginEnd="10dp"
+                app:cardElevation="4dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/call"
+                        android:layout_marginBottom="19dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="8dp" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Call Us on WhatsApp"
+                            android:textSize="17sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="For any query, you can call our whatsApp number."
+                            android:singleLine="true"
+                            android:textSize="15sp"
+                            android:padding="2dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="(Saturday to Friday: 7 AM to 10 PM)"
+                            android:textSize="15sp"
+                            android:layout_marginBottom="7dp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/callWhatsApp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/next"
+                        android:contentDescription="Next Icon"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="8dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

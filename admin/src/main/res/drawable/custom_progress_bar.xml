@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromDegrees="0"
+    android:toDegrees="360"
+    android:duration="1000"
+    android:interpolator="@android:anim/linear_interpolator">
+    <shape
+        android:shape="oval">
+        <solid android:color="#00ACC1"/>
+        <size android:width="120dp" android:height="120dp"/>
+        <stroke
+            android:color="#039BE5"
+            android:width="10dp"/>
+        <gradient
+            android:startColor="#FFEB3B"
+            android:endColor="#8E24AA"
+            android:angle="45"/>
+    </shape>
+</rotate>
