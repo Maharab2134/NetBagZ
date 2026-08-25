@@ -1,0 +1,109 @@
+Database name: shopping_db
+
+-- Table for Admin
+
+CREATE TABLE admin (
+    email VARCHAR(100) PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    phone_number VARCHAR(15) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE payments (
+    id INT AUTO_INCREMENT PRIMARY KEY,  
+    total_amount DECIMAL(10, 2) NOT NULL, 
+    transaction_id VARCHAR(255) NOT NULL,  
+    user_name VARCHAR(255) NOT NULL,  
+    user_shop_name VARCHAR(255) NOT NULL,  
+    invoice_id VARCHAR(255) NOT NULL UNIQUE, 
+    payment_method VARCHAR(50) NOT NULL,
+    product_size VARCHAR(4) NOT NULL,
+    address VARCHAR(255) NOT NULL,
+    status VARCHAR(50) DEFAULT 'pending',  
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,  
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+-- Table for Products
+CREATE TABLE products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    price DECIMAL(10, 2) NOT NULL,
+    details TEXT,
+    description TEXT,
+    rating DECIMAL(2, 1) CHECK (rating BETWEEN 0 AND 5),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Table for Users
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    phone VARCHAR(15) NOT NULL UNIQUE,
+    shopname VARCHAR(100) NOT NULL,
+    address TEXT,
+    password VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    status VARCHAR(50) DEFAULT 'inactive',
+    postalCode VARCHAR(10) NOT NULL
+);
+-- Table for Orders
+CREATE TABLE orders (
+    id INT AUTO_INCREMENT PRIMARY KEY, 
+    user_name VARCHAR(255) NOT NULL,
+    user_shop_name VARCHAR(255) NOT NULL,
+    invoice_id VARCHAR(255) NOT NULL UNIQUE,
+    total_amount DECIMAL(10, 2) NOT NULL,
+    payment_method VARCHAR(255) NOT NULL,
+    product_quantity INT NOT NULL,
+    product_size VARCHAR(4) NOT NULL,
+    productTitle VARCHAR(255) NOT NULL,
+    address VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Table for Chatbot
+CREATE TABLE chatbot_faqs ( 
+id INT AUTO_INCREMENT PRIMARY KEY,
+question VARCHAR(255) NOT NULL, 
+answer TEXT NOT NULL 
+);
+
+-- Table for delivery_man
+CREATE TABLE delivery_man (
+    id INT AUTO_INCREMENT PRIMARY KEY,    
+    name VARCHAR(255) NOT NULL,           
+    username VARCHAR(255) NOT NULL,      
+    phone_number VARCHAR(15) NOT NULL,    
+    email VARCHAR(255) NOT NULL UNIQUE,   
+    password VARCHAR(255) NOT NULL,       
+    address TEXT NOT NULL,               
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-------------------------------------------------------------------
+Database name: address
+Table -?
+CREATE TABLE IF NOT EXISTS districts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS unions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    district_id INT,
+    name VARCHAR(255) NOT NULL,
+    FOREIGN KEY (district_id) REFERENCES districts(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS villages (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    union_id INT,
+    name VARCHAR(255) NOT NULL,
+    FOREIGN KEY (union_id) REFERENCES unions(id) ON DELETE CASCADE
+);
+
